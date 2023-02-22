@@ -16,8 +16,6 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
 COPY /tools/auto_config.sh /tmp/auto_config.sh
-ENTRYPOINT [ "sh", "/tmp/auto_config.sh" ]
-
 RUN mkdir /run/php
 EXPOSE 9000
-CMD [ "/user/sbin/php-fpm7/3", "-F" ]
+ENTRYPOINT [ "sh", "/tmp/auto_config.sh" ]

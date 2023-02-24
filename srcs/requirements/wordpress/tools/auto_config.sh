@@ -2,7 +2,6 @@
 
 # Faire un healthcheck pour attendre que le service mariadb soit up
 sleep 12
-# rm -f /var/www/wordpress/wp-config.php
 
 if [ ! -e /var/www/wordpress/wp-config.php ]; then
 	echo "Configuring wordpress..."

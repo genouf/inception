@@ -54,13 +54,13 @@ volumes:
     driver: local
     driver_opts:
       type: 'none'
-      device: '/Users/genouf/data/wordpress'
+      device: '/home/genouf/data/wordpress'
       o: bind
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
-      device: '/Users/genouf/data/mariadb'
+      device: '/home/genouf/data/mariadb'
       o: bind
 
 networks:

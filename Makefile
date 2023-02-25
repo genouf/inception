@@ -14,8 +14,8 @@ clean:
     docker rm $$(docker ps -qa);\
     docker rmi -f $$(docker images -qa);\
     docker volume rm $$(docker volume ls -q);\
-	rm -rf /Users/genouf/data/mariadb/*;\
-	rm -rf /Users/genouf/data/wordpress/*;\
+	rm -rf /home/genouf/data/mariadb/*;\
+	rm -rf /home/genouf/data/wordpress/*;\
     docker network rm srcs_docker_network;\
 
 .PHONY: all down re clean
